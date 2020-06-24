@@ -94,7 +94,7 @@ function MARKERAPP:Start()
 
                 for k,v in pairs(MarkerApp:GetMarkers()) do
                     local icoords = v:Coords()
-                    local dist = GetDistanceBetweenCoords(coords.x, coords.y, coords.z, icoords.x, icoords.y, icoords.z, true)
+                    local dist = #(coords - icoords)
 
                     if dist < v:Threshold() and MarkerApp:InMarker() == false then
                         MarkerApp:InMarker(true)
@@ -149,9 +149,12 @@ function MARKER.new(coords, threshold)
     until randString ~= nil
 
     threshold = threshold or 1.5
+
+    local vcoords = vector3(coords.x, coords.y, coords.z)
+
     local _MARKER = {
         _UID = randString,
-        _Coords = coords,
+        _Coords = vcoords,
         _Threshold = threshold,
         OnEnter = function()
 
