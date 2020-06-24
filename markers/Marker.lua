@@ -95,11 +95,9 @@ function MARKERAPP:Start()
                 for k,v in pairs(MarkerApp:GetMarkers()) do
                     local icoords = v:Coords()
                     local dist = #(coords - icoords)
-
                     if dist < v:Threshold() and MarkerApp:InMarker() == false then
                         MarkerApp:InMarker(true)
                         MarkerApp:LastLocation(k)
-                        print('Lastlocation', MarkerApp:LastLocation())
                         v:OnEnter()
                     end
 
