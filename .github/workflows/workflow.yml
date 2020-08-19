@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 12.x
       - name: Compress Source
-      - uses: montudor/action-zip@v0.1.0
+        uses: montudor/action-zip@v0.1.0
         with:
           args: zip -qq -r ./release.zip ./src
       - name: Release
