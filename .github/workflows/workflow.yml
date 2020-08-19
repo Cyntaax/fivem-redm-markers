@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: 12.x
       - name: Release
-        run:
-          - npm i semantic-release -g
-          - cd src && npx semantic-release
+        run: |
+          npm i semantic-release -g
+          cd src && npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
