@@ -17,11 +17,8 @@
       ["@semantic-release/github", {
         "assets": [
           {
-            "path": "./src/**/*.lua", "label": "Resource Files"
+            "path": "./release.zip", "label": "Resource"
           },
-          {
-            "path": "./src/*.lua", "label": "Resource Files"
-          }
         ]
       }]
     ]
