@@ -13,7 +13,17 @@
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator"
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/github", {
+        "assets": [
+          {
+            "path": "./src/**/*.lua", "label": "Resource Files"
+          },
+          {
+            "path": "./src/*.lua", "label": "Resource Files"
+          }
+        ]
+      }]
     ]
   },
   "husky": {
