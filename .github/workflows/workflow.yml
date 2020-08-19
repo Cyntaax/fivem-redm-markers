@@ -4,12 +4,19 @@ on:
       - master
 
 jobs:
-  release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ release:
+  # Only release on push to master
+  if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+  runs-on: ubuntu-latest
+  # Waits for test jobs for each Node.js version to complete
+  steps:
+  - name: Checkout
+    uses: actions/checkout@v2
+  - name: Setup Node.js
+    uses: actions/setup-node@v1
+    with:
+      node-version: 12.x
+  - name: Release
+    run: cd src && npx semantic-release
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
