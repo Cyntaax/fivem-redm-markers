@@ -17,16 +17,23 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      ["@semantic-release/github", {
-        "assets": [
-          {
-            "path": "./release.zip", "label": "Resource"
-          }
-        ]
-      }],
-      ["@semantic-release/exec", {
-        "prepareCmd": "sed 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' ./src/fxmanifest.lua > ./src/fxmanifest.lua"
-      }]
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            {
+              "path": "./release.zip",
+              "label": "Resource"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "sed 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' ./src/fxmanifest.lua > ./src/fxmanifest.lua"
+        }
+      ]
     ],
     "tagFormat": "${version}"
   },
