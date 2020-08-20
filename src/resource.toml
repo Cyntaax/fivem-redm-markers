@@ -1,0 +1,5 @@
+Name = "Cyntaax/fivem-redm-markers"
+
+[Dependencies]
+"Cyntaax/redm-prompts" = "1.0.0"
+"Cyntaax/simple-lua-orm" = "1.0.0"
