@@ -19,6 +19,6 @@ jobs:
           sudo apt install zip unzip
           cd ./src && zip -r release.zip ./
           npm i semantic-release @semantic-release/exec -g
-          semantic-release
+          npm run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
