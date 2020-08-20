@@ -32,7 +32,7 @@
         "@semantic-release/exec",
         {
           "generateNotesCmd": "cd ./src && zip -r release.zip ./",
-          "verifyReleaseCmd": "gsed -i 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' ./src/fxmanifest.lua"
+          "verifyReleaseCmd": "sed -i 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' ./src/fxmanifest.lua"
         }
       ]
     ],
