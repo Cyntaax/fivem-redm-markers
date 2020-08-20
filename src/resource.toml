@@ -1,5 +1,6 @@
 [Base]
 Name = "Cyntaax/fivem-redm-markers"
+Version = "0.0.0"
 
 [Dependencies]
 "Cyntaax/fivem-redm-markers" = "1.0.2"
