@@ -21,7 +21,8 @@
           }
         ]
       }]
-    ]
+    ],
+    "tagFormat": "${version}"
   },
   "husky": {
     "hooks": {
