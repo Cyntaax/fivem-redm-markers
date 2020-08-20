@@ -22,7 +22,7 @@
         {
           "assets": [
             {
-              "path": "./release.zip",
+              "path": "./src/release.zip",
               "label": "Resource"
             }
           ]
