@@ -23,7 +23,7 @@
         ]
       }],
       ["@semantic-release/exec", {
-        "prepareCmd": "sed 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' src/fxmanifest.lua"
+        "prepareCmd": "sed 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' ./src/fxmanifest.lua"
       }]
     ],
     "tagFormat": "${version}"
