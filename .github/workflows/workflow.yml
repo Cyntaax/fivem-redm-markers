@@ -16,7 +16,7 @@ jobs:
           node-version: 12.x
       - name: Release
         run: |
-          apt install zip unzip
+          sudo apt install zip unzip
           cd ./src && zip -r release.zip ./
           npm i semantic-release -g
           semantic-release
