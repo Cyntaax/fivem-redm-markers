@@ -17,7 +17,7 @@ jobs:
       - name: Compress Source
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r ./release.zip ./src
+          args: cd ./src && zip -qq -r ./release.zip ./
       - name: Release
         run: |
           npm i semantic-release -g
