@@ -16,6 +16,7 @@ jobs:
           node-version: 12.x
       - name: Release
         run: |
+          npm i semantic-release -g
           npm run release-pre
           cd ./src && zip -r release.zip ./
           npm i
