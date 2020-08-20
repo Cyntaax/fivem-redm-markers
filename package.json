@@ -31,7 +31,8 @@
       [
         "@semantic-release/exec",
         {
-          "prepareCmd": "sed 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' ./src/fxmanifest.lua > ./src/fxmanifest.lua"
+          "generateNotesCmd": "cd ./src && zip -r release.zip ./",
+          "verifyReleaseCmd": "gsed -i 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' ./src/fxmanifest.lua"
         }
       ]
     ],
