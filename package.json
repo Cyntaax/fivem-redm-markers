@@ -20,6 +20,9 @@
             "path": "./release.zip", "label": "Resource"
           }
         ]
+      }],
+      ["@semantic-release/exec", {
+        "prepareCmd": "sed 's/version \\\".*\\\"/version \\\"${nextRelease.version}\\\"/g' src/fxmanifest.lua"
       }]
     ],
     "tagFormat": "${version}"
