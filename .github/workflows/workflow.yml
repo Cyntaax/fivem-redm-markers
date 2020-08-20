@@ -20,6 +20,6 @@ jobs:
           cd ./src && zip -r release.zip ./
           npm i semantic-release @semantic-release/exec -g
           npm i
-          npm run semantic-release
+          npm run release-ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
