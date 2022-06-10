@@ -5,7 +5,7 @@
     "release-pre": "semantic-release -d"
   },
   "devDependencies": {
-    "semantic-release": "17.0.8",
+    "semantic-release": "19.0.3",
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@semantic-release/exec": "^5.0.0",
     "commitlint": "8.3.5",
